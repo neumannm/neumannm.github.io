@@ -11,31 +11,115 @@
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
+
+# Theme Settings
 #
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+#theme                   : minima
+remote_theme             : "mmistakes/minimal-mistakes@4.17.2"
+minimal_mistakes_skin    : "dark" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-title: neumannm
-email: mandyneumann@gmx.net
+locale                      : "en"
+title                       : neumannm.github.io
+title_separator             : "-"
+name                        : "Mandy Neumann"
+url                         : "https://neumannm.github.io/"
+baseurl                     : "" # the subpath of your site, e.g. /blog
+url                         : "" # the base hostname & protocol for your site, e.g. http://example.com
+repository                  : "neumannm/neumannm.github.io"
 description: >- # this means to ignore newlines until "baseurl:"
   Personal website of GitHub user neumannm.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: protestreich
-github_username:  neumannm
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+comments:
+  provider               : false # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : # lunr (default), algolia
+
+# Outputting
+permalink: /blog/:year/:month/:day/:title
+paginate: 5 # amount of posts to show
+paginate_path: /blog/page:num
+timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+alexa_site_verification  :
+yandex_site_verification :
+
+# Social Sharing
+twitter:
+  username               : "protestreich"
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+
+# Site Author
+author:
+  name             : "Mandy Neumann"
+  avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Computational Linguist | Developer\nJava" # | Android | Python"
+  location         : "Germany"
+  email            : mandyneumann@gmx.net
+  uri              :
+  home             : # null (default), "absolute or relative url to link to author home"
+  bitbucket        : "neumannm"
+  github           : "neumannm"
+  linkedin         : "neumannmandy" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  stackoverflow    : "1948454/codebat" # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  twitter          : "protestreich"
+  xing             : "Mandy_Neumann17"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 
 # Build settings
-theme: minima
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jemoji
 markdown: CommonMarkGhPages
 
 commonmark:
   options: ["SMART", "FOOTNOTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+include: ["_pages"]
 
 # Exclude from processing.
 # The following items will not be processed, by default.
