@@ -149,7 +149,7 @@ plugins:
   - jekyll-feed
   - jemoji
   # - jekyll-seo-tag
-  # - jekyll-include-cache
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -159,7 +159,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   # - jekyll-seo-tag
-  # - jekyll-include-cache
+  - jekyll-include-cache
 
 # Archives
 #  Type
