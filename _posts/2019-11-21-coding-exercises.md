@@ -2,8 +2,8 @@
 layout: single
 title:  "My Profiles on Exercise Platforms"
 date:   2019-11-21 18:49:50 +0100
-categories: coding
-tags: coding exercism codewars
+tags: [coding, exercism, codewars]
+#categories: [test]
 ---
 I just found out, that there are actually public profiles on some websites I'm using for exercising, so I thought I could share them with you!
 
