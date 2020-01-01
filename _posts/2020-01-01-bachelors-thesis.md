@@ -1,4 +1,9 @@
-# My Bachelor's Thesis Code on GitHub
+---
+layout: single
+title:  "My Bachelor's Thesis Code on GitHub"
+date:   2020-01-01 19:29:50 +0100
+tags: [coding, thesis]
+---
 
 While the [code to my Master's thesis](https://github.com/neumannm/JobAdInformationExtraction) has been on GitHub already for a while now, since I was already using version control back then, I just recently also added a repository containing the [code to my Bachelor's thesis](https://github.com/neumannm/TEIDramaReader) that I submitted back in 2012. At that time, Subversion (SVN) was still the main VCS we used in our institute, so this repository has no interesting commit history to follow my progress, sorry. ;)
 
